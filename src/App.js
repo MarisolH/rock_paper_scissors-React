@@ -7,7 +7,7 @@ class App extends Component {
     super(props);
     this.options = [
       {id: 0, name:'?', src: require('./assets/icons/interr.png')},
-      {id: 1, name:'ROCK', src: require('./assets/icons/piedra.png')},
+      {id: 1, name:'piedra', src: require('./assets/icons/piedra.png')},
       {id: 2, name: 'PAPER', src: require('./assets/icons/papel.png')},
       {id: 3, name: 'SCISSORS', src: require('./assets/icons/tijeras.png')}
     ];
