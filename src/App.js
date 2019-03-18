@@ -20,30 +20,30 @@ class App extends Component {
   }
 
   onChangeImage(e, buttonValue, id){
-    document.getElementById("img").src = buttonValue;
-    this.randomNum = Math.floor(Math.random() * 3) + 1 ;
-    document.getElementById("pcImg").src = this.options[this.randomNum].src;
-    this.onValues(id, this.randomNum);
+    // document.getElementById("img").src = buttonValue;
+    // this.randomNum = Math.floor(Math.random() * 3) + 1 ;
+    // document.getElementById("pcImg").src = this.options[this.randomNum].src;
+    // this.onValues(id, this.randomNum);
   }
 
   onValues(playerVal, pcVal){
-    if((playerVal === 1 && pcVal === 3 )|| (playerVal === 2 && pcVal === 1 )|| (playerVal === 3 && pcVal === 2 )){
-      this.setState({countPlayer : this.state.countPlayer + 1})
-      this.handleShow();
-    }
-    else if (playerVal === pcVal) {
-      this.setState({result : 'TIE!'})   
-    } else {
-      this.setState({countPc : this.state.countPc + 1, result: 'PC WIN :('})
-    }
+    // if((playerVal === 1 && pcVal === 3 )|| (playerVal === 2 && pcVal === 1 )|| (playerVal === 3 && pcVal === 2 )){
+    //   this.setState({countPlayer : this.state.countPlayer + 1})
+    //   this.handleShow();
+    // }
+    // else if (playerVal === pcVal) {
+    //   this.setState({result : 'TIE!'})   
+    // } else {
+    //   this.setState({countPc : this.state.countPc + 1, result: 'PC WIN :('})
+    // }
   }
 
   handleClose() {
-    this.setState({ show: false });
+    // this.setState({ show: false });
   }
 
   handleShow() {
-    this.setState({ show: true });
+    // this.setState({ show: true });
   }
   
   render() {
@@ -54,7 +54,7 @@ class App extends Component {
           <Grid>
               <Row className="show-grid padding">
                 <Col md={6} >
-                  <p className="p-title">YOUR SCORE: {this.state.countPlayer}</p>                  
+                  <p className="p-title">YOUR SCORE: </p>                  
                   <div className="div-style">
                         <img src={this.options[0].src} id="img" alt=""/>
                   </div>
@@ -65,7 +65,7 @@ class App extends Component {
                   </div>
                 </Col>
                 <Col md={6} >
-                  <p className="p-title">PC'S SCORE: {this.state.countPc}</p>
+                  <p className="p-title">PC'S SCORE:</p>
                     <div className="div-style">
                         <img src={this.options[0].src} id="pcImg" alt=""/>
                     </div> 
@@ -75,10 +75,10 @@ class App extends Component {
           <Modal show={this.state.show} >
           <Modal.Body><p className="win">YOU WIN!!!</p></Modal.Body>
           <Modal.Footer>
-            <Button bsStyle="info" onClick={() => this.setState({ show: false })}>CONTINUE</Button>
+            <Button bsStyle="info">CONTINUE</Button>
           </Modal.Footer>
         </Modal>
-        <p className="p-title">{this.state.result}</p>
+        <p className="p-title"></p>
         </header>
       </div>
     );
